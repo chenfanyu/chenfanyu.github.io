@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-09T07:03:26.988Z</updated>
+  <updated>2018-10-09T07:11:37.363Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/10/07/macbook-pro-A1286-display-card-fix/"/>
     <id>http://yoursite.com/2018/10/07/macbook-pro-A1286-display-card-fix/</id>
     <published>2018-10-07T11:59:37.000Z</published>
-    <updated>2018-10-09T07:03:26.988Z</updated>
+    <updated>2018-10-09T07:11:37.363Z</updated>
     
     <content type="html"><![CDATA[<p>macbook pro A1286 维修记录及经验总结</p><h2 id="现象描述"><a href="#现象描述" class="headerlink" title="现象描述"></a>现象描述</h2><ul><li>购买：  2011年末购买macbook pro ，当时看重它是独显（后来问题也出在这），配置i7 CPU,500G硬盘，4G内存.</li><li>升级： 2015年觉得速度有点跟不上，磁盘空间也不够了，将光驱拆掉，换加上一块固态硬盘，并升级内存到8G。</li><li>故障： 2018年8-9月间觉得系统特别不稳定，经常崩溃，有时重启几次才能进入。排除硬盘、内存、电源问题。有点怀疑显卡问题，因为开机时会有条文，且苹果logo为绿色。打电话给苹果客服，到官网查询，不能定位原因，去苹果官方维修电，检测到是显卡问题，因显卡是集成在主板上，出厂时间太长，当前已无配件，维修不了。</li></ul><h2 id="解决过程及思路"><a href="#解决过程及思路" class="headerlink" title="解决过程及思路"></a>解决过程及思路</h2><p>仅仅因为一块显卡坏了，就把这个macbook废了？实在心有不甘。搜索“macbook pro显卡 A1286 ”，发现这种现象很多，甚至有一个专门术语，A1286显卡门（因为苹果AMD独显设计缺陷，很容易显卡导致过热损坏，5年左右坏的几率很大，涉及型号11、12款的15寸A1286和17寸的A1297），问题确定了，在淘宝搜索关键词，发现解决思路有两个，一个是换显卡（不稳定，这是设计缺陷，连原装的都要出问题），二是旁路独显，用i7系统自带的显卡（外接显示器不能用，也就是不能投影）。最后选择方案二，将主板拆下，寄给淘宝店家，改装好后使用正常，花费300。</p><p>改装前主板，注意红框就是显卡位置：</p><p><img src="/2018/10/07/macbook-pro-A1286-display-card-fix/2e4f38bd.jpg" alt="改装前主板，注意红框位置"></p><p>改装后主板，可以看到改装的外观还可以:</p><p><img src="/2018/10/07/macbook-pro-A1286-display-card-fix/25c452b6.jpg" alt="改装后主板"></p><h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><ul><li>相同案例：回想起家里的西门子滚筒洗衣机（WM10S360TI ws08m360TI  ），也是使用6,7年左右，电源不通电了，打西门子客服电话，售后到家检查说是主板坏了，费用2000多。上网一查，同样的问题很多，这其实也是西门子的设计缺陷。最后拆下主板，寄给淘宝店家改装，140搞定，16年6月到现在，运行很好。这也是某种程度上的店大欺客吧；另外也能看到广东华强北的能力。</li><li>搜索经验：macbook出问题时没能第一时间搜索到显卡门，而是在硬盘、内存、电源上折腾，甚至预约了苹果官方售后（预约时间长，要两周后），走了弯路。事后反思：<ol><li>关键词不精准是很大原因。精准搜索，一定要用术语搜索，也就是行话搜索，比如特定型号，显卡，花屏这样，我当初搜索的关键词是“苹果不能开机，绿色logo” 结果引导到硬盘、内存、电源上去了。</li><li>一定要用google搜索，百度仅供参考。</li><li>淘宝搜索是一个很大的辅助，商品详情页会把来龙去脉解释的很清楚。</li></ol></li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol><li><a href="http://bbs.zol.com.cn/nbbbs/d544_13067_uid_yezijb.html" target="_blank" rel="noopener">苹果显卡门 A1286花屏 显卡维修更换过程</a></li><li><a href="https://v.youku.com/v_show/id_XNTQ2NDI2MDc2.html" target="_blank" rel="noopener">主板拆除视频</a></li><li><a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.4ed82e8dDfLECE&amp;id=570488962656&amp;_u=71lkc0j55d8" target="_blank" rel="noopener">macbook主板维修淘宝店家</a></li><li><a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.5fd42e8dtQD3XW&amp;id=22825244886&amp;_u=71lkc0jb596" target="_blank" rel="noopener">西门子滚筒洗衣机维修淘宝店家</a></li></ol>]]></content>
     
