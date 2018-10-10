@@ -107,11 +107,11 @@
       author: '博主'
     },
     algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
+      applicationID: '8J6WRZHEHD',
+      apiKey: '52ac8be9f5df9bff822bdd9afbf0eb06',
+      indexName: 'chenfanyublog',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      labels: {"input_placeholder":"请输入关健字","hits_empty":"没有找到与[ ${query} ] 相关的内容","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
     }
   };
 </script>
@@ -251,9 +251,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -268,6 +306,171 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/10/supermacro-R7410G09/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="chenfanyu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chenfanyu blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/10/supermacro-R7410G09/" itemprop="url">超云 supermacro 服务器 R7410G09 静音改造</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-10T09:27:43+08:00">
+                2018-10-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/设备环境/" itemprop="url" rel="index">
+                    <span itemprop="name">设备环境</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>因业务调整，闲置出一台超云GPU 4U服务器，型号R7410G09 配置为CPU: 双核E2650 内存 64G，主板： X9DRG-QF  主板尺寸： 38.6cm×33.5cm。 想把该服务器作为个人台式机使用，但是声音实在太大，无法忍受。国庆假期，静音改造，记录如下：</p>
+<h2 id="改造方案及思路"><a href="#改造方案及思路" class="headerlink" title="改造方案及思路"></a>改造方案及思路</h2><ul>
+<li><p>现状分析：当前声音大主要是因为机箱和电源风扇，机箱风扇有7个，电源风扇2个（双模组电源），作为台式机，不需要那么高的散热要求，准备停止部分机箱风扇，看运行效果。经测试，实际结果不理想。 即使将所有机箱风扇停用，保留电源风扇和cpu风扇，声音还是比较大，cpu温度在不开应用的时候是60°。根据这个情况，改造需要保留机箱风扇，同时更换静音效果好的电源。</p>
+</li>
+<li><p>解决方案。 寻找适合的机箱电源，准备整个更换。电源好找，经过测算目前配件的功耗（主板+显卡+CPU）750w足够。主板尺寸很大，比EATX都大了不少，google搜索关键词“支持X9DRG-QF的机箱”，找到兼容机箱品牌 联力， 再通过淘宝找卖联力机箱的店家，买到 A76型号的机箱，京东买850w安钛克的电源,固态硬盘（做系统盘），顺利迁移过去。开机运行，声音和普通台式机一样，cpu温度35° 。改造成功！</p>
+<p>效果图：</p>
+<p>超云R7410G09，红框位置都有风扇</p>
+<p><img src="/2018/10/10/supermacro-R7410G09/b30cbc00.jpg" alt=""></p>
+<p>拆下主板</p>
+<p><img src="/2018/10/10/supermacro-R7410G09/b076fe9d.jpg" alt=""></p>
+<p>联力机箱内部，当前用2个机箱风扇，一前一后，组成风道</p>
+<p><img src="/2018/10/10/supermacro-R7410G09/a11d71fa.jpg" alt=""></p>
+<p>外观</p>
+<p><img src="/2018/10/10/supermacro-R7410G09/077b5a1f.jpg" alt=""></p>
+</li>
+</ul>
+<h2 id="回顾总结"><a href="#回顾总结" class="headerlink" title="回顾总结"></a>回顾总结</h2><ul>
+<li>与更换macbook pro 经验一样，搜索关键词一定要精确，因主板体积太大，在淘宝店找EATX的机箱店主问几家都不支持，最后google搜索找到线索。</li>
+<li>后续如果闲置服务器，一样可以照此处理，通常情况下速度比普通pc速度快多了，而且稳定</li>
+<li>服务器主板一般不带声卡，京东购买一个usb外置独立声卡解决。</li>
+<li>目前声音效果已经符合要求，原计划如果声音还比较大，准备将cpu风扇换为水冷，现在看这个银子省下了。</li>
+</ul>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
+<li><a href="https://detail.tmall.com/item.htm?id=15387722118&amp;spm=a1z09.2.0.0.4c4e2e8d9BhvYj&amp;_u=a1lkc0j229b" target="_blank" rel="noopener">天猫联力机箱</a></li>
+<li><a href="https://item.jd.com/6828157.html" target="_blank" rel="noopener">京东安钛克电源</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -493,7 +696,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -515,7 +718,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -764,6 +967,19 @@
   
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
