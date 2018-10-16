@@ -339,7 +339,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/16/paste/" itemprop="url">粘贴版的深度使用</a></h1>
+                <a class="post-title-link" href="/2018/10/16/paste/" itemprop="url">粘贴板的深度使用</a></h1>
         
 
         <div class="post-meta">
@@ -390,8 +390,11 @@
         
           
             <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>粘贴、复制作为最常用的电脑操作命令之一，每天用到n多次。正因为用的频繁，在这上面提升一些效率，收益就很大了。以下就是对粘贴复制的一些整理。</p>
-<h2 id="循环粘贴版-ditto"><a href="#循环粘贴版-ditto" class="headerlink" title="循环粘贴版-ditto"></a>循环粘贴版-ditto</h2><p>ctrl+c,ctrl+v 之所以频繁使用，除了实际需要之外，另一个很大的原因是系统的粘贴版只有1个，不能查看粘贴历史，要提高效率，首先要改进的就是能显示粘贴历史，这里强烈推荐软件ditto。</p>
-<p>软件截图：</p>
+<h2 id="循环粘贴板-ditto"><a href="#循环粘贴板-ditto" class="headerlink" title="循环粘贴板-ditto"></a>循环粘贴板-ditto</h2><p>ctrl+c,ctrl+v 之所以频繁使用，除了实际需要之外，另一个很大的原因是系统的粘贴板只能显示最近的1个，不能查看粘贴历史，要提高效率，首先要改进的就是能显示粘贴历史，可以在粘贴历史中选择性的粘贴。比如软件ditto：</p>
+<ul>
+<li><a href="http://ditto-cp.sourceforge.net/" target="_blank" rel="noopener">下载地址</a></li>
+</ul>
+<p>使用界面截图：</p>
 <p><img src="/2018/10/16/paste/0609b70f.png" alt=""></p>
 <p>常用快捷键：</p>
 <table>
@@ -402,6 +405,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left">ctrl+~</td>
+<td style="text-align:left">显示粘贴历史</td>
+</tr>
 <tr>
 <td style="text-align:left">F3</td>
 <td style="text-align:left">预览粘贴内容</td>
@@ -434,30 +441,62 @@
 <td style="text-align:left">ctrl+g</td>
 <td style="text-align:left">查看组</td>
 </tr>
-<tr>
-<td style="text-align:left"></td>
-</tr>
 </tbody>
 </table>
-<p>特殊功能：</p>
+<p><strong>特殊功能：</strong></p>
 <ol>
 <li>支持图片粘贴</li>
 <li>支持局域网内跨机器粘贴</li>
 <li>支持 shift 选择多个粘贴内容</li>
 </ol>
-<h2 id="markdown中的图片粘贴"><a href="#markdown中的图片粘贴" class="headerlink" title="markdown中的图片粘贴"></a>markdown中的图片粘贴</h2><p>idea jetbrain不仅仅是软件开发的利器，作为markdwon编辑器也是极好用的。就快速插入粘贴版中的图片来说，可以采用</p>
+<p><strong>特殊窗口</strong></p>
+<p>对于特殊的窗口，粘贴命令可能会不一样，复制粘贴命令可能会不一样，通过修改配置文件 ditto.settings 设定。</p>
+<ul>
+<li>Custom key stroke format</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Ex:  ^p  (sends ctrl-p)</span><br><span class="line">Ex:  %e&#123;DELAY 50&#125;p  (sends Alt-e, delays 50 ms then sends p)</span><br><span class="line">Ex:  ^c  (Sends ctrl-c)</span><br><span class="line">Ex:  ^x  (Sends ctrl-x)</span><br></pre></td></tr></table></figure>
+<p>按键对应关系</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Key</th>
+<th style="text-align:left">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">WINKEY</td>
+<td style="text-align:left">@</td>
+</tr>
+<tr>
+<td style="text-align:left">SHIFT</td>
+<td style="text-align:left">+</td>
+</tr>
+<tr>
+<td style="text-align:left">CTRL</td>
+<td style="text-align:left">^</td>
+</tr>
+<tr>
+<td style="text-align:left">ALT</td>
+<td style="text-align:left">%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>特殊窗口配置</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[CopyStrings]</span><br><span class="line">gvim.exe=</span><br><span class="line">cmd.exe=% &#123;Delay100&#125;ey</span><br><span class="line">emacs.exe=%w</span><br><span class="line">securecrt.exe=^u</span><br><span class="line"></span><br><span class="line">[CutStrings]</span><br><span class="line">gvim.exe=\&quot;&#123;PLUS&#125;x</span><br><span class="line">emacs.exe=%x</span><br><span class="line">securecrt.exe=^k</span><br><span class="line"></span><br><span class="line">[PasteStrings]</span><br><span class="line">gvim.exe=\&quot;&#123;PLUS&#125;gP</span><br><span class="line">cmd.exe=% &#123;Delay100&#125;ep</span><br><span class="line">emacs.exe=^y</span><br><span class="line">securecrt.exe=+&#123;ins&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="markdown中的图片粘贴"><a href="#markdown中的图片粘贴" class="headerlink" title="markdown中的图片粘贴"></a>markdown中的图片粘贴</h2><p>idea jetbrain 不仅仅是软件开发的利器，作为 markdown 编辑器也是极好用的。就快速插入粘贴板中的图片来说，可以采用</p>
 <p>markdown paste image 插件, <a href="https://plugins.jetbrains.com/plugin/8446-paste-images-into-markdown" target="_blank" rel="noopener">下载地址</a></p>
 <p>界面如下：</p>
 <p><img src="/2018/10/16/paste/3245eb7d.png" alt=""></p>
-<h2 id="将粘贴版中的内容保存成文件"><a href="#将粘贴版中的内容保存成文件" class="headerlink" title="将粘贴版中的内容保存成文件"></a>将粘贴版中的内容保存成文件</h2><p>很多时候复制了一段文字、代码、图片都想要将它们保存成文件，但每次都要重复做一遍操作，以文本为例：「复制→新建文本文档→打开文本→粘贴→保存」，甚是烦人。</p>
-<p>PasteEx 这个免费开源绿色小软件就是解决这个问题的，安装完成后，注册到右键菜单，在你复制了文本、HTML、代码、富文本、图片等内容之后，直接在资源管理器空白地方右键，选择「粘贴成文件」即可。也可以用快捷键 Ctrl + Alt + X 进行快速粘贴。随时可以将粘贴版中的内容保存为文件，结合ditto，非常方便。</p>
+<h2 id="将粘贴板中的内容保存成文件"><a href="#将粘贴板中的内容保存成文件" class="headerlink" title="将粘贴板中的内容保存成文件"></a>将粘贴板中的内容保存成文件</h2><p>很多时候复制了一段文字、代码、图片都想要将它们保存成文件，但每次都要重复做一遍操作，以文本为例：复制→新建文本文档→打开文本→粘贴→保存，甚是烦人。</p>
+<p>PasteEx 这个免费开源绿色小软件就是解决这个问题的，安装完成后，注册到右键菜单，在你复制了文本、HTML、代码、富文本、图片等内容之后，直接在资源管理器空白地方右键，选择「粘贴成文件」即可。也可以用快捷键 Ctrl + Alt + X 进行快速粘贴。随时可以将粘贴板中的内容保存为文件，结合ditto，非常方便。</p>
 <p>特殊功能：</p>
 <ul>
 <li>监听模式下可以批量复制保存</li>
 </ul>
 <p><a href="https://www.iplaysoft.com/pasteex.html" target="_blank" rel="noopener">软件详细介绍</a></p>
 <h2 id="其他场景"><a href="#其他场景" class="headerlink" title="其他场景"></a>其他场景</h2><ul>
-<li>移动终端-电脑共享粘贴版： <a href="http://clipber.com/clipber/index.html?style=blue" target="_blank" rel="noopener">快贴</a></li>
+<li>移动终端-电脑共享粘贴板： <a href="http://clipber.com/clipber/index.html?style=blue" target="_blank" rel="noopener">快贴</a></li>
 </ul>
 <h2 id="changelog"><a href="#changelog" class="headerlink" title="changelog"></a>changelog</h2>
           
@@ -572,6 +611,19 @@
             </span>
           
 
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/10/supermacro-R7410G09/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/10/10/supermacro-R7410G09/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
